@@ -1,0 +1,11 @@
+version: '3'
+services:
+  app:
+    container_name: react-app-container
+    build: .
+    volumes:
+      - ./:/app
+    working_dir: /app
+    command: sh -c "npm install && npm start"
+    ports:
+      - '3000:3000'
